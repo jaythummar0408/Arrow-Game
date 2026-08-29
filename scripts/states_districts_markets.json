@@ -1,0 +1,1002 @@
+{
+  "extractedAt": "2026-02-12T11:28:53.098Z",
+  "totalRecords": 198,
+  "models": {
+    "state": [
+      {
+        "id": "698c69a6912eab34fd69a753",
+        "name": "Gujarat",
+        "name_gj": "ગુજરાત"
+      }
+    ],
+    "district": [
+      {
+        "id": "698c69a6912eab34fd69a756",
+        "name": "Sabarkantha",
+        "name_gj": "સાબરકાંઠા"
+      },
+      {
+        "id": "698c69a6912eab34fd69a769",
+        "name": "Surat",
+        "name_gj": "સુરત"
+      },
+      {
+        "id": "698c69a6912eab34fd69a77a",
+        "name": "Kheda",
+        "name_gj": "ખેડા"
+      },
+      {
+        "id": "698c69a6912eab34fd69a78b",
+        "name": "Ahmedabad",
+        "name_gj": "અમદાવાદ"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7a3",
+        "name": "Vadodara(Baroda)",
+        "name_gj": "વડોદરા(બરોડા)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7b4",
+        "name": "Navsari",
+        "name_gj": "નવસારી"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7c1",
+        "name": "Rajkot",
+        "name_gj": "રાજકોટ"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7df",
+        "name": "Bhavnagar",
+        "name_gj": "ભાવનગર"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7fb",
+        "name": "Dahod",
+        "name_gj": "દાહોદ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a819",
+        "name": "Bharuch",
+        "name_gj": "ભરૂચ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a828",
+        "name": "Gandhinagar",
+        "name_gj": "ગાંધીનગર"
+      },
+      {
+        "id": "698c69a7912eab34fd69a840",
+        "name": "Gir Somnath",
+        "name_gj": "ગીર સોમનાથ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8ba",
+        "name": "Jamnagar",
+        "name_gj": "જામનગર"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8dd",
+        "name": "Morbi",
+        "name_gj": "મોરબી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8f3",
+        "name": "Banaskanth",
+        "name_gj": "બનાસકાંઠ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a904",
+        "name": "Patan",
+        "name_gj": "પાટણ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a911",
+        "name": "Amreli",
+        "name_gj": "અમરેલી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a91e",
+        "name": "Mehsana",
+        "name_gj": "મહેસાણા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a98c",
+        "name": "Porbandar",
+        "name_gj": "પોરબંદર"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa13",
+        "name": "Surendranagar",
+        "name_gj": "સુરેન્દ્રનગર"
+      },
+      {
+        "id": "698c69a7912eab34fd69aba1",
+        "name": "Junagarh",
+        "name_gj": "જુનાગઢ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad61",
+        "name": "Anand",
+        "name_gj": "આણંદ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae24",
+        "name": "Kachchh",
+        "name_gj": "કચ્છ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae54",
+        "name": "Chhota Udaipur",
+        "name_gj": "છોટા ઉદેપુર"
+      },
+      {
+        "id": "698c69a8912eab34fd69b043",
+        "name": "Valsad",
+        "name_gj": "વલસાડ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b078",
+        "name": "Devbhumi Dwarka",
+        "name_gj": "દેવભૂમિ દ્વારકા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b403",
+        "name": "Botad",
+        "name_gj": "બોટાદ"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc63",
+        "name": "Panchmahals",
+        "name_gj": "પંચમહાલ"
+      },
+      {
+        "id": "698c69ab912eab34fd69c94d",
+        "name": "Narmada",
+        "name_gj": "નર્મદા"
+      },
+      {
+        "id": "698c6cd90772c8759546d05f",
+        "name": "The Dangs",
+        "name_gj": "દાંગ"
+      }
+    ],
+    "market": [
+      {
+        "id": "698c69a6912eab34fd69a759",
+        "name": "Dhansura APMC",
+        "name_gj": "ધાનસુરા APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a76c",
+        "name": "Vyra APMC",
+        "name_gj": "વ્યારા APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a77d",
+        "name": "Nadiyad(Piplag) APMC",
+        "name_gj": "નડિયાદ(પિપલાગ) APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a78e",
+        "name": "Ahmedabad APMC",
+        "name_gj": "અમદાવાદ APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a799",
+        "name": "Surat APMC",
+        "name_gj": "સુરત APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7a6",
+        "name": "Vadodara(Sayajipura) APMC",
+        "name_gj": "વડોદરા(સયાજીપુરા) APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7b7",
+        "name": "Navsari APMC",
+        "name_gj": "નવસારી APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7c4",
+        "name": "Jetpur(Dist.Rajkot) APMC",
+        "name_gj": "જેતપુર(જિલ્લા રાજકોટ) APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7e2",
+        "name": "Taleja APMC",
+        "name_gj": "તળજા APMC"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7fe",
+        "name": "Devgadhbaria APMC",
+        "name_gj": "દેવગઢબારિયા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a80b",
+        "name": "Mahuva(Station Road) APMC",
+        "name_gj": "માહુવા(સ્ટેશન રોડ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a81c",
+        "name": "Bharuch APMC",
+        "name_gj": "ભરૂચ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a82b",
+        "name": "Mansa(Manas Veg Yard) APMC",
+        "name_gj": "માંસા(માણસ વેજ યાર્ડ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a843",
+        "name": "Veraval APMC",
+        "name_gj": "વેરાવળ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a85d",
+        "name": "Padra APMC",
+        "name_gj": "પાદરા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a873",
+        "name": "Dahod(Veg. Market) APMC",
+        "name_gj": "દાહોદ(વેજ. માર્કેટ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8bd",
+        "name": "Jamnagar APMC",
+        "name_gj": "જામનગર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8c8",
+        "name": "Dehgam(Rekhiyal) APMC",
+        "name_gj": "દેહગામ(રેખિયાલ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8d3",
+        "name": "Dahod APMC",
+        "name_gj": "દાહોદ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8e0",
+        "name": "Morbi APMC",
+        "name_gj": "મોરબી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8f6",
+        "name": "Thara APMC",
+        "name_gj": "થરા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a907",
+        "name": "Chansama APMC",
+        "name_gj": "ચાંસામા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a914",
+        "name": "Amreli APMC",
+        "name_gj": "અમરેલી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a921",
+        "name": "Mehsana(Jornang) APMC",
+        "name_gj": "મહેસાણા(જોરનંગ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a935",
+        "name": "Sami APMC",
+        "name_gj": "સામી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a940",
+        "name": "Mehsana APMC",
+        "name_gj": "મહેસાણા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a954",
+        "name": "Radhanpur APMC",
+        "name_gj": "રાધનપુર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a95f",
+        "name": "Vijapur(veg) APMC",
+        "name_gj": "વિજાપુર(વેજ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a975",
+        "name": "Rajkot(Veg.Sub Yard) APMC",
+        "name_gj": "રાજકોટ(વેજ.સબ યાર્ડ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a98f",
+        "name": "Porbandar APMC",
+        "name_gj": "પોરબંદર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a99a",
+        "name": "Deesa(Deesa Veg Yard) APMC",
+        "name_gj": "ડીસા(ડીસા વેજ યાર્ડ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9b0",
+        "name": "Ankleshwar APMC",
+        "name_gj": "અંકલેશ્વર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9c1",
+        "name": "Gondal(Veg.market Gondal) APMC",
+        "name_gj": "ગોંડલ(વેજ.માર્કેટ ગોંડલ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa07",
+        "name": "Mehsana(Mehsana Veg) APMC",
+        "name_gj": "મહેસાણા(મહેસાણા વેજ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa16",
+        "name": "Vadhvan APMC",
+        "name_gj": "વાધવાન APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa23",
+        "name": "Bagasara APMC",
+        "name_gj": "બાગસરા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa5a",
+        "name": "Rajkot APMC",
+        "name_gj": "રાજકોટ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa70",
+        "name": "Jasdan APMC",
+        "name_gj": "જસદણ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa7b",
+        "name": "Himatnagar APMC",
+        "name_gj": "હિમતનગર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aaa7",
+        "name": "Dhragradhra APMC",
+        "name_gj": "ધ્રાંગધ્રા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aab2",
+        "name": "Babra APMC",
+        "name_gj": "બાબરા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aacf",
+        "name": "Dhoraji APMC",
+        "name_gj": "ધોરાજી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aade",
+        "name": "Modasa APMC",
+        "name_gj": "મોડાસા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab59",
+        "name": "Talalagir APMC",
+        "name_gj": "તળાલા ગીર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aba4",
+        "name": "Bhesan APMC",
+        "name_gj": "ભેસાણ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69abaf",
+        "name": "Savarkundla APMC",
+        "name_gj": "સાવરકુંડલા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac04",
+        "name": "Siddhpur APMC",
+        "name_gj": "સિદ્ધપુર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac20",
+        "name": "Talod APMC",
+        "name_gj": "તળોદ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac2b",
+        "name": "Kalol APMC",
+        "name_gj": "કલોલ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac36",
+        "name": "Palanpur APMC",
+        "name_gj": "પાલનપુર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac5b",
+        "name": "Damnagar APMC",
+        "name_gj": "ડામનગર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac85",
+        "name": "Ahmedabad(Chimanbhai Patal Market Vasana) APMC",
+        "name_gj": "અમદાવાદ(ચિમનભાઈ પટેલ માર્કેટ વસણા) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aceb",
+        "name": "Kalawad APMC",
+        "name_gj": "કાલાવાડ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad20",
+        "name": "Vyara(Paati) APMC",
+        "name_gj": "વ્યારા(પાટી) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad2f",
+        "name": "Songadh(Badarpada) APMC",
+        "name_gj": "સોંગઢ(બાદરપાડા) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad64",
+        "name": "Khambhat(Veg Yard Khambhat) APMC",
+        "name_gj": "ખંભાત(વેજ યાર્ડ ખંભાત) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad78",
+        "name": "Anand(Veg,Yard,Anand) APMC",
+        "name_gj": "આણંદ(વેજ યાર્ડ આણંદ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad9b",
+        "name": "Nadiyad(Chaklasi) APMC",
+        "name_gj": "નડિયાદ(ચકલાસી) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69adde",
+        "name": "Bhiloda APMC",
+        "name_gj": "ભીલોડા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69adf2",
+        "name": "Vadali APMC",
+        "name_gj": "વડાલી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae06",
+        "name": "Thara(Shihori) APMC",
+        "name_gj": "થરા(શિહોરી) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae27",
+        "name": "Anjar APMC",
+        "name_gj": "અંજાર APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae32",
+        "name": "Modasa(Tintoi) APMC",
+        "name_gj": "મોડાસા(ટીંટોઈ) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae3d",
+        "name": "Chotila APMC",
+        "name_gj": "ચોટીલા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae48",
+        "name": "APMCKHEDBRAHMA",
+        "name_gj": "APMC ખેડબ્રહ્મા"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae57",
+        "name": "Bodeliu APMC",
+        "name_gj": "બોડેલી APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae64",
+        "name": "Hadad     APMC",
+        "name_gj": "હદદ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae6f",
+        "name": "Zalod(Sanjeli) APMC",
+        "name_gj": "ઝાળોદ(સાંજેલી) APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae89",
+        "name": "Dhanera APMC",
+        "name_gj": "ધાનેરા APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aea3",
+        "name": "Kapadvanj APMC",
+        "name_gj": "કપડવંજ APMC"
+      },
+      {
+        "id": "698c69a7912eab34fd69aeb7",
+        "name": "Visnagar APMC",
+        "name_gj": "વિસનગર APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69af7a",
+        "name": "Mansa APMC",
+        "name_gj": "માંસા APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b046",
+        "name": "Pardi(Rohinee) APMC",
+        "name_gj": "પારડી(રોહિણી) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b051",
+        "name": "Pardi(Vapi) APMC",
+        "name_gj": "પારડી(વાપી) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b07b",
+        "name": "Bhanvad APMC",
+        "name_gj": "ભાણવડ APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b08f",
+        "name": "Jam Jodhpur APMC",
+        "name_gj": "જામ જોધપુર APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b0a3",
+        "name": "Rapar APMC",
+        "name_gj": "રાપર APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b0ae",
+        "name": "Dhari APMC",
+        "name_gj": "ધારી APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b0cb",
+        "name": "Vankaner APMC",
+        "name_gj": "વાંકાનેર APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b110",
+        "name": "Unjha APMC",
+        "name_gj": "ઉંઝા APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b18c",
+        "name": "Bilimora APMC",
+        "name_gj": "બિલીમોરા APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b2dc",
+        "name": "Kadi APMC",
+        "name_gj": "કડી APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b2fb",
+        "name": "Viramgam APMC",
+        "name_gj": "વિરમગામ APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b318",
+        "name": "Unava APMC",
+        "name_gj": "ઉનાવા APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b406",
+        "name": "Botad APMC",
+        "name_gj": "બોટાદ APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b49e",
+        "name": "Kalediya APMC",
+        "name_gj": "કાલેડીયા APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b545",
+        "name": "Mandvi APMC",
+        "name_gj": "માંડવી APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b562",
+        "name": "Kadi(Kadi cotton Yard) APMC",
+        "name_gj": "કડી(કડી કોટન યાર્ડ) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b56f",
+        "name": "Botad(Haddad) APMC",
+        "name_gj": "બોટાદ(હદદ) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b5fa",
+        "name": "Nadiad APMC",
+        "name_gj": "નડિયાદ APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b6d8",
+        "name": "Vijapur(Kukarvada) APMC",
+        "name_gj": "વિજાપુર(કુકરવાડા) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b724",
+        "name": "Chikli(Khorgam) APMC",
+        "name_gj": "ચિકલી(ખોરગામ) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b753",
+        "name": "Vijapur(Gojjariya) APMC",
+        "name_gj": "વિજાપુર(ગોજ્જરિયા) APMC"
+      },
+      {
+        "id": "698c69a8912eab34fd69b75e",
+        "name": "Dehgam APMC",
+        "name_gj": "દેહગામ APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69b7b3",
+        "name": "Bhabhar APMC",
+        "name_gj": "ભાભર APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69b8cb",
+        "name": "Mahuva(Anaval) APMC",
+        "name_gj": "માહુવા(અનાવાળ) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69b982",
+        "name": "Jasdan(Vichhiya) APMC",
+        "name_gj": "જસદણ(વિછીયા) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69b98d",
+        "name": "Modasar APMC",
+        "name_gj": "મોડાસર APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69ba1f",
+        "name": "Songadh(Umrada) APMC",
+        "name_gj": "સોંગઢ(ઉમરાડા) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69ba59",
+        "name": "Songadh APMC",
+        "name_gj": "સોંગઢ APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69ba88",
+        "name": "Umreth APMC",
+        "name_gj": "ઉમરેઠ APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb20",
+        "name": "Dholka APMC",
+        "name_gj": "ધોળકા APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb48",
+        "name": "Pardi(Ugvada) APMC",
+        "name_gj": "પારડી(ઉગવાડા) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb53",
+        "name": "Chikhali APMC",
+        "name_gj": "ચીખલી APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb69",
+        "name": "Jhalod APMC",
+        "name_gj": "ઝાળોદ APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc04",
+        "name": "Davgadbaria(Piplod) APMC",
+        "name_gj": "દેવગઢબારિયા(પિપલોદ) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc0f",
+        "name": "Botad(Bhabarkot) APMC",
+        "name_gj": "બોટાદ(ભાભરકોટ) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc59",
+        "name": "Dhandhuka APMC",
+        "name_gj": "ધંધુકા APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc66",
+        "name": "Godhra(Timbaroad) APMC",
+        "name_gj": "ગોધરા(ટિંબારોડ) APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bf11",
+        "name": "Borsad APMC",
+        "name_gj": "બોરસદ APMC"
+      },
+      {
+        "id": "698c69a9912eab34fd69bf42",
+        "name": "Vijapur APMC",
+        "name_gj": "વિજાપુર APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c0b9",
+        "name": "Sayala APMC",
+        "name_gj": "સાયલા APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c0cd",
+        "name": "Godhra APMC",
+        "name_gj": "ગોધરા APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c0da",
+        "name": "Meghraj(Radlavada) APMC",
+        "name_gj": "મેઘરજ(રાદળવાડા) APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c114",
+        "name": "Una APMC",
+        "name_gj": "ઉના APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c18d",
+        "name": "Diyodar APMC",
+        "name_gj": "દિયોદર APMC"
+      },
+      {
+        "id": "698c69aa912eab34fd69c335",
+        "name": "Vadgam APMC",
+        "name_gj": "વડગામ APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c58b",
+        "name": "Limdi APMC",
+        "name_gj": "લિંબડી APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c77d",
+        "name": "Pardi APMC",
+        "name_gj": "પારડી APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c788",
+        "name": "Pardi(Motavagachiya) APMC",
+        "name_gj": "પારડી(મોટાવાગાચીયા) APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c839",
+        "name": "Talod(Harsol) APMC",
+        "name_gj": "તળોદ(હારસોલ) APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c8f5",
+        "name": "Meghraj APMC",
+        "name_gj": "મેઘરજ APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c91f",
+        "name": "Bhuj APMC",
+        "name_gj": "ભુજ APMC"
+      },
+      {
+        "id": "698c69ab912eab34fd69c950",
+        "name": "Rajpipla APMC",
+        "name_gj": "રાજપીપળા APMC"
+      },
+      {
+        "id": "698c6c475dc8d42d60acb492",
+        "name": "Bardoli(Kadod) APMC",
+        "name_gj": "બારડોલી(કડોદ) APMC"
+      },
+      {
+        "id": "698c6c495dc8d42d60acbb17",
+        "name": "Dasada Patadi APMC",
+        "name_gj": "ડસાડા પટડી APMC"
+      },
+      {
+        "id": "698c6c495dc8d42d60acbb6a",
+        "name": "Upleta APMC",
+        "name_gj": "ઉપલેટા APMC"
+      },
+      {
+        "id": "698c6c495dc8d42d60acbbfe",
+        "name": "Deesa APMC",
+        "name_gj": "ડીસા APMC"
+      },
+      {
+        "id": "698c6c495dc8d42d60acbc6c",
+        "name": "Tharad APMC",
+        "name_gj": "થરાદ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbcb6",
+        "name": "Vav APMC",
+        "name_gj": "વાવ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbd36",
+        "name": "Bhavnagar APMC",
+        "name_gj": "ભાવનગર APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbd4a",
+        "name": "Visavadar APMC",
+        "name_gj": "વિસાવદર APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbdb8",
+        "name": "Kalol(Veg,Market,Kalol) APMC",
+        "name_gj": "કલોલ(વેજ માર્કેટ કલોલ) APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbe77",
+        "name": "Panthawada APMC",
+        "name_gj": "પંથાવાડા APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbedc",
+        "name": "Patan APMC",
+        "name_gj": "પાટણ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acbf92",
+        "name": "Gondal APMC",
+        "name_gj": "ગોંડલ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc036",
+        "name": "APMC HALVAD",
+        "name_gj": "APMC હલવદ"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc0bf",
+        "name": "Tharad(Rah) APMC",
+        "name_gj": "થરાદ(રહ) APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc0ca",
+        "name": "Deesa(Bhildi) APMC",
+        "name_gj": "ડીસા(ભીલડી) APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc102",
+        "name": "Rajula APMC",
+        "name_gj": "રાજુલા APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc10f",
+        "name": "Junagadh APMC",
+        "name_gj": "જુનાગઢ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc11a",
+        "name": "Sanad APMC",
+        "name_gj": "સનદ APMC"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc225",
+        "name": "Palitana APMC",
+        "name_gj": "પાલીતાણા APMC"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60acc7ab",
+        "name": "Limkheda APMC",
+        "name_gj": "લીંખેડા APMC"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60accb28",
+        "name": "Vansda APMC",
+        "name_gj": "વાંસદા APMC"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60accb57",
+        "name": "Mandal APMC",
+        "name_gj": "માંડલ APMC"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60accd1d",
+        "name": "Patan(Veg,Yard Patan) APMC",
+        "name_gj": "પાટણ(વેજ યાર્ડ પાટણ) APMC"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60accd31",
+        "name": "Vansda(Limzar) APMC",
+        "name_gj": "વાંસદા(લીમઝર) APMC"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acd1b3",
+        "name": "Matar APMC",
+        "name_gj": "માતર APMC"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acd520",
+        "name": "Valsad APMC",
+        "name_gj": "વલસાડ APMC"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acd72e",
+        "name": "Harij APMC",
+        "name_gj": "હારિજ APMC"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acd9c1",
+        "name": "Manavdar APMC",
+        "name_gj": "માણાવદર APMC"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acdbda",
+        "name": "Nasvadi APMC",
+        "name_gj": "નાસવાડી APMC"
+      },
+      {
+        "id": "698c6cd70772c8759546bfdd",
+        "name": "Khambhat(Grain Market) APMC",
+        "name_gj": "ખંભાત(ગ્રેઈન માર્કેટ) APMC"
+      },
+      {
+        "id": "698c6cd80772c8759546ca07",
+        "name": "Morva Hafad APMC",
+        "name_gj": "મોરવા હાફડ APMC"
+      },
+      {
+        "id": "698c6cd80772c8759546ca12",
+        "name": "Uchhal APMC",
+        "name_gj": "ઉછાલ APMC"
+      },
+      {
+        "id": "698c6cd80772c8759546ca41",
+        "name": "Tarapur APMC",
+        "name_gj": "તારાપુર APMC"
+      },
+      {
+        "id": "698c6cd90772c8759546d062",
+        "name": "Ahwa-Dang APMC",
+        "name_gj": "આહવા-દાંગ APMC"
+      },
+      {
+        "id": "698c6cd90772c8759546d13c",
+        "name": "Lakhani APMC",
+        "name_gj": "લાખાણી APMC"
+      },
+      {
+        "id": "698c6cda0772c8759546dab0",
+        "name": "Godhra Kakanpur APMC",
+        "name_gj": "ગોધરા કાકનપુર APMC"
+      },
+      {
+        "id": "698c6cda0772c8759546db15",
+        "name": "Vagodiya APMC",
+        "name_gj": "વગોડીયા APMC"
+      },
+      {
+        "id": "698c6ce50772c87595470378",
+        "name": "Amirgadh APMC",
+        "name_gj": "અમીરગઢ APMC"
+      },
+      {
+        "id": "698c6ce90772c8759547219b",
+        "name": "Gogamba APMC",
+        "name_gj": "ગોગાંબા APMC"
+      },
+      {
+        "id": "698c6ceb0772c875954734bf",
+        "name": "Gogamba(Similiya) APMC",
+        "name_gj": "ગોગાંબા(સીમળીયા) APMC"
+      },
+      {
+        "id": "698c6cfe0772c8759547bfda",
+        "name": "Anand APMC",
+        "name_gj": "આણંદ APMC"
+      },
+      {
+        "id": "698c6d060772c8759547f71c",
+        "name": "Prantij APMC",
+        "name_gj": "પ્રાંતિજ APMC"
+      },
+      {
+        "id": "698c6d1d0772c8759548833d",
+        "name": "Bardoli APMC",
+        "name_gj": "બારડોલી APMC"
+      }
+    ]
+  }
+}

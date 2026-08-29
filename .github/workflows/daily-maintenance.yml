@@ -1,0 +1,36 @@
+name: Daily maintenance (sync + retention)
+
+# Re-syncs the last few finalized days, then purges market prices older than
+# the retention window. Runs once daily at 01:30 IST (20:00 UTC).
+on:
+  schedule:
+    - cron: "30 20 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: apmc-data-jobs
+  cancel-in-progress: false
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NODE_ENV: production
+      DB_NAME: APMC
+      DATA_GOV_BASE_URL: https://api.data.gov.in/resource
+      PRICE_RETENTION_DAYS: "35"
+      MONGO_URI_PROD: ${{ secrets.MONGO_URI_PROD }}
+      MONGO_URI_DEV: ${{ secrets.MONGO_URI_DEV }}
+      DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Sync finalized recent days (today + last 4)
+        run: node scripts/fastBackfill.js 5
+      - name: Purge old prices (35-day retention)
+        run: node scripts/purgeOldPrices.js

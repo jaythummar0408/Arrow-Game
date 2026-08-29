@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gujarati Names Test</title>
+    <style>
+      body {
+        font-family: "Noto Sans Gujarati", Arial, sans-serif;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .gujarati {
+        font-size: 18px;
+        color: #0066cc;
+      }
+      .status {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .error {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      h1 {
+        color: #333;
+      }
+      #loading {
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🇮🇳 APMC Khetivadi - Gujarati Names Test</h1>
+    <p>Testing bilingual API responses (English + ગુજરાતી)</p>
+
+    <div id="loading">Loading data from API...</div>
+
+    <div id="results" style="display: none">
+      <h2>Commodities (પદાર્થો)</h2>
+      <table id="commodities-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>English Name</th>
+            <th>Gujarati Name (ગુજરાતી નામ)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="commodities-body"></tbody>
+      </table>
+
+      <h2>Varieties (જાતો)</h2>
+      <table id="varieties-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>English Name</th>
+            <th>Gujarati Name (ગુજરાતી નામ)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="varieties-body"></tbody>
+      </table>
+
+      <h2>Grades (ગ્રેડ)</h2>
+      <table id="grades-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>English Name</th>
+            <th>Gujarati Name (ગુજરાતી નામ)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="grades-body"></tbody>
+      </table>
+    </div>
+
+    <script>
+      const API_BASE = "http://localhost:3000/api";
+
+      async function fetchData(endpoint) {
+        try {
+          const response = await fetch(`${API_BASE}/${endpoint}?limit=10`);
+          const data = await response.json();
+          return data.data || [];
+        } catch (error) {
+          console.error(`Error fetching ${endpoint}:`, error);
+          return [];
+        }
+      }
+
+      function renderTable(items, tableBodyId) {
+        const tbody = document.getElementById(tableBodyId);
+        tbody.innerHTML = "";
+
+        items.forEach((item, index) => {
+          const row = tbody.insertRow();
+          row.insertCell(0).textContent = index + 1;
+          row.insertCell(1).textContent = item.name;
+
+          const gujaratiCell = row.insertCell(2);
+          gujaratiCell.className = "gujarati";
+          gujaratiCell.textContent = item.name_gj || "(Not translated)";
+
+          const statusCell = row.insertCell(3);
+          if (item.name_gj && item.name_gj.trim() !== "") {
+            statusCell.innerHTML =
+              '<span class="status success">✓ Translated</span>';
+          } else {
+            statusCell.innerHTML =
+              '<span class="status error">✗ Missing</span>';
+          }
+        });
+      }
+
+      async function loadAllData() {
+        document.getElementById("loading").style.display = "block";
+        document.getElementById("results").style.display = "none";
+
+        const [commodities, varieties, grades] = await Promise.all([
+          fetchData("commodities"),
+          fetchData("varieties"),
+          fetchData("grades"),
+        ]);
+
+        renderTable(commodities, "commodities-body");
+        renderTable(varieties, "varieties-body");
+        renderTable(grades, "grades-body");
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("results").style.display = "block";
+      }
+
+      // Load data when page loads
+      loadAllData();
+    </script>
+  </body>
+</html>

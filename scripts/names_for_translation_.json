@@ -1,0 +1,1383 @@
+{
+  "extractedAt": "2026-02-12T11:23:58.210Z",
+  "totalRecords": 472,
+  "models": {
+    "commodity": [
+      {
+        "id": "698c69a6912eab34fd69a75c",
+        "name": "Arhar(Tur/Red Gram)(Whole)",
+        "name_gj": "અરહર(તુવેર/લાલ ચણા)(આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7a9",
+        "name": "Capsicum",
+        "name_gj": "કેપ્સિકમ"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7c7",
+        "name": "Bengal Gram(Gram)(Whole)",
+        "name_gj": "ચણા(આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7d4",
+        "name": "Black Gram(Urd Beans)(Whole)",
+        "name_gj": "ઉડદ(આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7f0",
+        "name": "Paddy(Common)",
+        "name_gj": "ધાન"
+      },
+      {
+        "id": "698c69a7912eab34fd69a846",
+        "name": "Millets",
+        "name_gj": "બાજરી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a853",
+        "name": "Drumstick",
+        "name_gj": "સુરગવો"
+      },
+      {
+        "id": "698c69a7912eab34fd69a869",
+        "name": "Rat Tail Radish(Mogari)",
+        "name_gj": "મોગરી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a876",
+        "name": "Mint(Pudina)",
+        "name_gj": "ફુદીનો"
+      },
+      {
+        "id": "698c69a7912eab34fd69a883",
+        "name": "Pea Pod/Pea Cod/हरी मटर",
+        "name_gj": "વટાણા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a88e",
+        "name": "Little gourd(Kundru)",
+        "name_gj": "ટેંડોરા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8a6",
+        "name": "Bajra(Pearl Millet/Cumbu)",
+        "name_gj": "બાજરી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8f9",
+        "name": "Castor Seed",
+        "name_gj": "એરંડા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a978",
+        "name": "Ginger(Green)",
+        "name_gj": "આદુ(લીલું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69a99d",
+        "name": "Ridgeguard(Tori)",
+        "name_gj": "તુરીયા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9b3",
+        "name": "Cucumbar(Kheera)",
+        "name_gj": "કાકડી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9c4",
+        "name": "Seetapal",
+        "name_gj": "સીતાફળ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9dc",
+        "name": "Raddish",
+        "name_gj": "મુળો"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9e9",
+        "name": "Chikoos(Sapota)",
+        "name_gj": "ચીકુ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9f4",
+        "name": "Sweet Potato",
+        "name_gj": "શક્કરીયા"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa9b",
+        "name": "Sesamum(Sesame,Gingelly,Til)",
+        "name_gj": "તલ"
+      },
+      {
+        "id": "698c69a7912eab34fd69aad2",
+        "name": "Soyabean",
+        "name_gj": "સોયાબીન"
+      },
+      {
+        "id": "698c69a7912eab34fd69aaea",
+        "name": "Green Gram(Moong)(Whole)",
+        "name_gj": "મગ(આખું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab00",
+        "name": "Lemon",
+        "name_gj": "લીંબુ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab16",
+        "name": "Sponge gourd",
+        "name_gj": "ઘોસાળી"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab21",
+        "name": "Bottle gourd",
+        "name_gj": "દુધી"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab42",
+        "name": "Ber(Zizyphus/Borehannu)",
+        "name_gj": "બોર"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab6e",
+        "name": "Elephant Yam(Suran)/Amorphophallus",
+        "name_gj": "સુરણ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab7b",
+        "name": "Yam(Ratalu)",
+        "name_gj": "રતાળું"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab8f",
+        "name": "Pegeon Pea(Arhar Fali)",
+        "name_gj": "તુવેર ફળી"
+      },
+      {
+        "id": "698c69a7912eab34fd69abbd",
+        "name": "Coriander(Leaves)",
+        "name_gj": "કોથમીર(પાન)"
+      },
+      {
+        "id": "698c69a7912eab34fd69abca",
+        "name": "Banana - Green",
+        "name_gj": "કેળું - લીલું"
+      },
+      {
+        "id": "698c69a7912eab34fd69abe0",
+        "name": "Cowpea(Veg)",
+        "name_gj": "ચોળા"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac07",
+        "name": "Jowar(Sorghum)",
+        "name_gj": "જુવાર"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac70",
+        "name": "Methi(Leaves)",
+        "name_gj": "મેથી(પાન)"
+      },
+      {
+        "id": "698c69a7912eab34fd69aca5",
+        "name": "Guar Seed(Cluster Beans Seed)",
+        "name_gj": "ગવાર બીજ"
+      },
+      {
+        "id": "698c69a7912eab34fd69acb0",
+        "name": "French Beans(Frasbean)",
+        "name_gj": "ફરાસબી"
+      },
+      {
+        "id": "698c69a7912eab34fd69acbb",
+        "name": "Indian Beans(Seam)",
+        "name_gj": "સીમ"
+      },
+      {
+        "id": "698c69a7912eab34fd69acee",
+        "name": "Corriander seed",
+        "name_gj": "ધાણા"
+      },
+      {
+        "id": "698c69a7912eab34fd69acf9",
+        "name": "Green Chilli",
+        "name_gj": "લીલા મરચા"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad23",
+        "name": "Guar",
+        "name_gj": "ગવાર"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad3b",
+        "name": "Bhindi(Ladies Finger)",
+        "name_gj": "ભીંડા"
+      },
+      {
+        "id": "698c69a8912eab34fd69aef8",
+        "name": "Cummin Seed(Jeera)",
+        "name_gj": "જીરું"
+      },
+      {
+        "id": "698c69a8912eab34fd69af3d",
+        "name": "Onion Green",
+        "name_gj": "લીલી ડુંગળી"
+      },
+      {
+        "id": "698c69a8912eab34fd69af5c",
+        "name": "Tinda",
+        "name_gj": "ટીંડા"
+      },
+      {
+        "id": "698c69a8912eab34fd69af88",
+        "name": "Groundnut(Split)",
+        "name_gj": "મગફળી(ફોડેલી)"
+      },
+      {
+        "id": "698c69a8912eab34fd69afc2",
+        "name": "Surat Beans(Papadi)",
+        "name_gj": "પાપડી"
+      },
+      {
+        "id": "698c69a8912eab34fd69afd6",
+        "name": "Lime",
+        "name_gj": "લીંબુ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b007",
+        "name": "Ground Nut Seed",
+        "name_gj": "મગફળી બીજ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b104",
+        "name": "Arhar Dal(Tur Dal)",
+        "name_gj": "તુવેર દાળ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b113",
+        "name": "Isabgul(Psyllium)",
+        "name_gj": "ઇસબગુલ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b120",
+        "name": "Cluster beans",
+        "name_gj": "ગવાર ફળી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b12b",
+        "name": "Water Melon",
+        "name_gj": "તરબૂચ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b141",
+        "name": "Mousambi(Sweet Lime)",
+        "name_gj": "મોસંબી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b1aa",
+        "name": "Dry Chillies",
+        "name_gj": "સૂકા મરચા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b1dd",
+        "name": "Peas Wet",
+        "name_gj": "લીલા વટાણા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b241",
+        "name": "Bitter gourd",
+        "name_gj": "કારેલા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b276",
+        "name": "Other Pulses",
+        "name_gj": "અન્ય કઠોળ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b2ae",
+        "name": "Mango(Raw-Ripe)",
+        "name_gj": "કેરી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b38f",
+        "name": "Pineapple",
+        "name_gj": "અનેનસ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b3b7",
+        "name": "Beetroot",
+        "name_gj": "બીટ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b3c2",
+        "name": "Sunhemp",
+        "name_gj": "સણ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b4e4",
+        "name": "Methi Seeds",
+        "name_gj": "મેથી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b6db",
+        "name": "Cotton Seed",
+        "name_gj": "કપાસ બીજ"
+      },
+      {
+        "id": "698c69a9912eab34fd69b77c",
+        "name": "Ajwan",
+        "name_gj": "અજમો"
+      },
+      {
+        "id": "698c69a9912eab34fd69b831",
+        "name": "Papaya(Raw)",
+        "name_gj": "પપૈયા(કાચું)"
+      },
+      {
+        "id": "698c69a9912eab34fd69b8ce",
+        "name": "Pointed gourd(Parval)",
+        "name_gj": "પરવળ"
+      },
+      {
+        "id": "698c69a9912eab34fd69b8f4",
+        "name": "Long Melon(Kakri)",
+        "name_gj": "કાકડી"
+      },
+      {
+        "id": "698c69a9912eab34fd69b8ff",
+        "name": "Turmeric(raw)",
+        "name_gj": "હળદર(કાચી)"
+      },
+      {
+        "id": "698c69a9912eab34fd69be69",
+        "name": "Kabuli Chana(Chickpeas-White)",
+        "name_gj": "કાબુલી ચણા"
+      },
+      {
+        "id": "698c69a9912eab34fd69be88",
+        "name": "Suva(Dill Seed)",
+        "name_gj": "સુવા"
+      },
+      {
+        "id": "698c69a9912eab34fd69bea0",
+        "name": "Rajgir",
+        "name_gj": "રાજગરો"
+      },
+      {
+        "id": "698c69aa912eab34fd69c1ab",
+        "name": "Chilly Capsicum",
+        "name_gj": "કેપ્સિકમ મરચા"
+      },
+      {
+        "id": "698c69aa912eab34fd69c305",
+        "name": "Soanf",
+        "name_gj": "વરિયાળી"
+      },
+      {
+        "id": "698c69aa912eab34fd69c38b",
+        "name": "Karbuja(Musk Melon)",
+        "name_gj": "ખરબૂજા"
+      },
+      {
+        "id": "698c69aa912eab34fd69c3b3",
+        "name": "Kulthi(Horse Gram)",
+        "name_gj": "કુલથી"
+      },
+      {
+        "id": "698c69ab912eab34fd69c7a8",
+        "name": "Red Gram",
+        "name_gj": "લાલ ચણા"
+      },
+      {
+        "id": "698c69ab912eab34fd69c8c7",
+        "name": "Chili Red",
+        "name_gj": "લાલ મરચા"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc1ad",
+        "name": "White Peas",
+        "name_gj": "સફેદ વટાણા"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acd52c",
+        "name": "Field Pea",
+        "name_gj": "વટાણા"
+      },
+      {
+        "id": "698c6cd80772c8759546cbe2",
+        "name": "Asalia",
+        "name_gj": "આસલીયા"
+      },
+      {
+        "id": "698c6cdd0772c8759546e364",
+        "name": "Colacasia",
+        "name_gj": "અરવી"
+      },
+      {
+        "id": "698c6cdf0772c8759546ec9c",
+        "name": "Cowpea(Lobia/Karamani)",
+        "name_gj": "ચોળા"
+      },
+      {
+        "id": "698c6cdf0772c8759546ed88",
+        "name": "Gram Raw(Chholia)",
+        "name_gj": "છોલીયા"
+      },
+      {
+        "id": "698c6cdf0772c8759546f308",
+        "name": "Black Gram Dal(Urd Dal)",
+        "name_gj": "ઉડદ દાળ"
+      },
+      {
+        "id": "698c6ce00772c8759546fbab",
+        "name": "Mataki",
+        "name_gj": "માટકી"
+      },
+      {
+        "id": "698c6ce90772c875954724fe",
+        "name": "Raya",
+        "name_gj": "રાઈ"
+      },
+      {
+        "id": "698c6cf90772c87595478dab",
+        "name": "Barley(Jau)",
+        "name_gj": "જવ"
+      },
+      {
+        "id": "698c6cfd0772c8759547b447",
+        "name": "Foxtail Millet(Navane)",
+        "name_gj": "કાંગ"
+      },
+      {
+        "id": "698c6cff0772c8759547c56b",
+        "name": "Ginger(Dry)",
+        "name_gj": "સૂંઠ"
+      },
+      {
+        "id": "698c6d0a0772c87595481190",
+        "name": "Leafy Vegetable",
+        "name_gj": "લીલા શાક"
+      },
+      {
+        "id": "698c6d120772c8759548379c",
+        "name": "Big Gram",
+        "name_gj": "મોટા ચણા"
+      },
+      {
+        "id": "698c6d200772c875954892ab",
+        "name": "Turnip",
+        "name_gj": "સલગમ"
+      },
+      {
+        "id": "698c6d210772c8759548a305",
+        "name": "Snakeguard",
+        "name_gj": "પડવળ"
+      },
+      {
+        "id": "698c6d350772c87595493287",
+        "name": "Taramira",
+        "name_gj": "તારામીરા"
+      }
+    ],
+    "variety": [
+      {
+        "id": "698c69a6912eab34fd69a75f",
+        "name": "Other",
+        "name_gj": "અન્ય"
+      },
+      {
+        "id": "698c69a6912eab34fd69a770",
+        "name": "Arhar (Whole)",
+        "name_gj": "અરહર (આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7ac",
+        "name": "Capsicum",
+        "name_gj": "કેપ્સિકમ"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7ca",
+        "name": "Desi (Whole)",
+        "name_gj": "દેશી (આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7d7",
+        "name": "Black Gram (Whole)",
+        "name_gj": "ઉડદ (આખું)"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7e6",
+        "name": "Local",
+        "name_gj": "સ્થાનિક"
+      },
+      {
+        "id": "698c69a6912eab34fd69a7f3",
+        "name": "Common",
+        "name_gj": "સામાન્ય"
+      },
+      {
+        "id": "698c69a7912eab34fd69a811",
+        "name": "Red",
+        "name_gj": "લાલ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a849",
+        "name": "Millets",
+        "name_gj": "બાજરી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a879",
+        "name": "Mint(Pudina)",
+        "name_gj": "ફુદીનો"
+      },
+      {
+        "id": "698c69a7912eab34fd69a891",
+        "name": "Little gourd (Kundru)",
+        "name_gj": "ટેંડોરા"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8a9",
+        "name": "Hybrid",
+        "name_gj": "સંકર"
+      },
+      {
+        "id": "698c69a7912eab34fd69a8fc",
+        "name": "Castor seed",
+        "name_gj": "એરંડા બીજ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a97b",
+        "name": "Green Ginger",
+        "name_gj": "લીલું આદુ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9b6",
+        "name": "Cucumbar",
+        "name_gj": "કાકડી"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9c7",
+        "name": "Seethaphal",
+        "name_gj": "સીતાફળ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9df",
+        "name": "Raddish",
+        "name_gj": "મુળો"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa0b",
+        "name": "Sweet Potato",
+        "name_gj": "શક્કરીયા"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa29",
+        "name": "Balli/Habbu",
+        "name_gj": "બોલ્ડ"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa51",
+        "name": "Bold",
+        "name_gj": "બોલ્ડ"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa67",
+        "name": "G20",
+        "name_gj": "G20"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa7f",
+        "name": "JL-24",
+        "name_gj": "JL-24"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa9e",
+        "name": "White",
+        "name_gj": "સફેદ"
+      },
+      {
+        "id": "698c69a7912eab34fd69aad5",
+        "name": "Yellow",
+        "name_gj": "પીળું"
+      },
+      {
+        "id": "698c69a7912eab34fd69aaed",
+        "name": "Green (Whole)",
+        "name_gj": "લીલું (આખું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab03",
+        "name": "Lemon",
+        "name_gj": "લીંબુ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab24",
+        "name": "Bottle Gourd",
+        "name_gj": "દુધી"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab45",
+        "name": "Ber(Zizyphus)",
+        "name_gj": "બોર"
+      },
+      {
+        "id": "698c69a7912eab34fd69ab71",
+        "name": "Elephant Yam (Suran)",
+        "name_gj": "સુરણ"
+      },
+      {
+        "id": "698c69a7912eab34fd69abb3",
+        "name": "Small (Whole)",
+        "name_gj": "નાનું (આખું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69abcd",
+        "name": "Banana - Green",
+        "name_gj": "કેળું - લીલું"
+      },
+      {
+        "id": "698c69a7912eab34fd69abe3",
+        "name": "Cowpea (Veg)",
+        "name_gj": "ચોળા"
+      },
+      {
+        "id": "698c69a7912eab34fd69abee",
+        "name": "White (whole)",
+        "name_gj": "સફેદ (આખું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69abfb",
+        "name": "2189 No. 2",
+        "name_gj": "2189 નંબર 2"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac0a",
+        "name": "Jowar ( White)",
+        "name_gj": "જુવાર (સફેદ)"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac17",
+        "name": "Cotton (Ginned)",
+        "name_gj": "કપાસ (પાકું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac3a",
+        "name": "Deshi",
+        "name_gj": "દેશી"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac45",
+        "name": "Kalyan",
+        "name_gj": "કલ્યાણ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ac73",
+        "name": "Methi",
+        "name_gj": "મેથી"
+      },
+      {
+        "id": "698c69a7912eab34fd69acd0",
+        "name": "Ridgeguard(Tori)",
+        "name_gj": "તુરીયા"
+      },
+      {
+        "id": "698c69a7912eab34fd69acfc",
+        "name": "Green Chilly",
+        "name_gj": "લીલા મરચા"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad26",
+        "name": "Gwar",
+        "name_gj": "ગવાર"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad50",
+        "name": "Bhindi",
+        "name_gj": "ભીંડા"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad92",
+        "name": "Guaar",
+        "name_gj": "ગવાર"
+      },
+      {
+        "id": "698c69a7912eab34fd69add5",
+        "name": "Narma BT Cotton",
+        "name_gj": "નર્મા BT કપાસ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae4c",
+        "name": "Lok-1",
+        "name_gj": "લોક-1"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae5b",
+        "name": "Shanker 6 (B) 30mm FIne",
+        "name_gj": "શંકર 6 (B) 30mm ફાઈન"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae8d",
+        "name": "Yellow (Black)",
+        "name_gj": "પીળું (કાળું)"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae9a",
+        "name": "Banana - Ripe",
+        "name_gj": "કેળું - પાકું"
+      },
+      {
+        "id": "698c69a7912eab34fd69aed6",
+        "name": "Rajasthan Tukdi",
+        "name_gj": "રાજસ્થાન ટુકડી"
+      },
+      {
+        "id": "698c69a8912eab34fd69aeee",
+        "name": "Desi",
+        "name_gj": "દેશી"
+      },
+      {
+        "id": "698c69a8912eab34fd69af40",
+        "name": "Onion Green",
+        "name_gj": "લીલી ડુંગળી"
+      },
+      {
+        "id": "698c69a8912eab34fd69af5f",
+        "name": "Tinda",
+        "name_gj": "ટીંડા"
+      },
+      {
+        "id": "698c69a8912eab34fd69af7e",
+        "name": "Whole",
+        "name_gj": "આખું"
+      },
+      {
+        "id": "698c69a8912eab34fd69af8b",
+        "name": "Groundnut(Split)",
+        "name_gj": "મગફળી(ફોડેલી)"
+      },
+      {
+        "id": "698c69a8912eab34fd69b00a",
+        "name": "Ground Nut Seed",
+        "name_gj": "મગફળી બીજ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b01e",
+        "name": "Pigeon Pea (Arhar Fali)",
+        "name_gj": "તુવેર ફળી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b03b",
+        "name": "Drumstick",
+        "name_gj": "સુરગવો"
+      },
+      {
+        "id": "698c69a8912eab34fd69b067",
+        "name": "Sapota",
+        "name_gj": "ચીકુ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b107",
+        "name": "Arhar Dal(Tur)",
+        "name_gj": "તુવેર દાળ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b116",
+        "name": "Isabgul (Psyllium)",
+        "name_gj": "ઇસબગુલ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b12e",
+        "name": "Water Melon",
+        "name_gj": "તરબૂચ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b156",
+        "name": "Mousambi",
+        "name_gj": "મોસંબી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b1ad",
+        "name": "Dry Chillies",
+        "name_gj": "સૂકા મરચા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b1f2",
+        "name": "Soyabeen",
+        "name_gj": "સોયાબીન"
+      },
+      {
+        "id": "698c69a8912eab34fd69b21c",
+        "name": "Black",
+        "name_gj": "કાળું"
+      },
+      {
+        "id": "698c69a8912eab34fd69b2e0",
+        "name": "Caster",
+        "name_gj": "એરંડા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b32e",
+        "name": "Coriander Seed",
+        "name_gj": "ધાણા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b342",
+        "name": "Medium Green",
+        "name_gj": "મધ્યમ લીલું"
+      },
+      {
+        "id": "698c69a8912eab34fd69b358",
+        "name": "Annabesahai",
+        "name_gj": "અન્નભેસાઈ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b3ad",
+        "name": "Bitter Gourd",
+        "name_gj": "કારેલા"
+      },
+      {
+        "id": "698c69a8912eab34fd69b3c5",
+        "name": "Sunhemp",
+        "name_gj": "સણ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b42e",
+        "name": "Hybrid Red (Cattle Feed)",
+        "name_gj": "સંકર લાલ (પશુ ચારો)"
+      },
+      {
+        "id": "698c69a8912eab34fd69b44b",
+        "name": "RCH-2",
+        "name_gj": "RCH-2"
+      },
+      {
+        "id": "698c69a8912eab34fd69b456",
+        "name": "Lokwan",
+        "name_gj": "લોકવાન"
+      },
+      {
+        "id": "698c69a8912eab34fd69b4ab",
+        "name": "Average (Whole)",
+        "name_gj": "સરેરાશ (આખું)"
+      },
+      {
+        "id": "698c69a8912eab34fd69b4c8",
+        "name": "Amruthapani",
+        "name_gj": "અમૃતપાની"
+      },
+      {
+        "id": "698c69a8912eab34fd69b4e7",
+        "name": "Methiseeds",
+        "name_gj": "મેથી બીજ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b50d",
+        "name": "White (SAFED)",
+        "name_gj": "સફેદ"
+      },
+      {
+        "id": "698c69a8912eab34fd69b521",
+        "name": "Bansi",
+        "name_gj": "બાંસી"
+      },
+      {
+        "id": "698c69a8912eab34fd69b566",
+        "name": "Cotton (Unginned)",
+        "name_gj": "કપાસ (કાચું)"
+      },
+      {
+        "id": "698c69a8912eab34fd69b585",
+        "name": "H.Y.4 (Unginned)",
+        "name_gj": "H.Y.4 (કાચું)"
+      },
+      {
+        "id": "698c69a8912eab34fd69b619",
+        "name": "Cummin Seed(Jeera)",
+        "name_gj": "જીરું"
+      },
+      {
+        "id": "698c69a8912eab34fd69b62d",
+        "name": "African Sarson",
+        "name_gj": "આફ્રિકન રાઈ"
+      },
+      {
+        "id": "698c69a9912eab34fd69b7ed",
+        "name": "A-1, Green",
+        "name_gj": "A-1, લીલું"
+      },
+      {
+        "id": "698c69a9912eab34fd69b801",
+        "name": "Beetroot",
+        "name_gj": "બીટ"
+      },
+      {
+        "id": "698c69a9912eab34fd69b827",
+        "name": "Peas cod",
+        "name_gj": "વટાણા"
+      },
+      {
+        "id": "698c69a9912eab34fd69b92f",
+        "name": "777 New Ind",
+        "name_gj": "777 ન્યૂ ઈન્ડ"
+      },
+      {
+        "id": "698c69a9912eab34fd69b979",
+        "name": "Sarson(Black)",
+        "name_gj": "રાઈ(કાળી)"
+      },
+      {
+        "id": "698c69a9912eab34fd69ba8c",
+        "name": "MH-179",
+        "name_gj": "MH-179"
+      },
+      {
+        "id": "698c69a9912eab34fd69badf",
+        "name": "Local (Whole)",
+        "name_gj": "સ્થાનિક (આખું)"
+      },
+      {
+        "id": "698c69a9912eab34fd69baea",
+        "name": "Groundnut seed",
+        "name_gj": "મગફળી બીજ"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb36",
+        "name": "Paddy",
+        "name_gj": "ધાન"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc6a",
+        "name": "Paddy fine",
+        "name_gj": "ધાન ઝીણું"
+      },
+      {
+        "id": "698c69a9912eab34fd69bc75",
+        "name": "Lokwan Gujrat",
+        "name_gj": "લોકવાન ગુજરાત"
+      },
+      {
+        "id": "698c69a9912eab34fd69bd85",
+        "name": "Ajwan",
+        "name_gj": "અજમો"
+      },
+      {
+        "id": "698c69a9912eab34fd69bdea",
+        "name": "French Beans (Frasbean)",
+        "name_gj": "ફરાસબી"
+      },
+      {
+        "id": "698c69a9912eab34fd69be6c",
+        "name": "Kabuli Chana(Chickpeas-white)",
+        "name_gj": "કાબુલી ચણા"
+      },
+      {
+        "id": "698c69a9912eab34fd69be8b",
+        "name": "Suva",
+        "name_gj": "સુવા"
+      },
+      {
+        "id": "698c69a9912eab34fd69be96",
+        "name": "Suva (Dill Seed)",
+        "name_gj": "સુવા"
+      },
+      {
+        "id": "698c69a9912eab34fd69bebe",
+        "name": "H.B (Unginned)",
+        "name_gj": "H.B (કાચું)"
+      },
+      {
+        "id": "698c69a9912eab34fd69bedb",
+        "name": "Lohi Black",
+        "name_gj": "લોહી કાળી"
+      },
+      {
+        "id": "698c69a9912eab34fd69bf39",
+        "name": "Red Nanital",
+        "name_gj": "લાલ નૈનીતાલ"
+      },
+      {
+        "id": "698c69aa912eab34fd69c066",
+        "name": "147 Average",
+        "name_gj": "147 સરેરાશ"
+      },
+      {
+        "id": "698c69aa912eab34fd69c071",
+        "name": "2189 No. 1",
+        "name_gj": "2189 નંબર 1"
+      },
+      {
+        "id": "698c69aa912eab34fd69c0d1",
+        "name": "Paddy Medium",
+        "name_gj": "ધાન મધ્યમ"
+      },
+      {
+        "id": "698c69aa912eab34fd69c102",
+        "name": "Medium Fine",
+        "name_gj": "મધ્યમ ઝીણું"
+      },
+      {
+        "id": "698c69aa912eab34fd69c118",
+        "name": "Shanker 4 31mm FIne",
+        "name_gj": "શંકર 4 31mm ફાઈન"
+      },
+      {
+        "id": "698c69aa912eab34fd69c259",
+        "name": "Round",
+        "name_gj": "ગોળ"
+      },
+      {
+        "id": "698c69aa912eab34fd69c308",
+        "name": "Soanf",
+        "name_gj": "વરિયાળી"
+      },
+      {
+        "id": "698c69aa912eab34fd69c381",
+        "name": "Peas Wet",
+        "name_gj": "લીલા વટાણા"
+      },
+      {
+        "id": "698c69aa912eab34fd69c3a0",
+        "name": "Pomogranate",
+        "name_gj": "દાડમ"
+      },
+      {
+        "id": "698c69aa912eab34fd69c3b6",
+        "name": "Horse gram (Whole)",
+        "name_gj": "કુલથી (આખું)"
+      },
+      {
+        "id": "698c69aa912eab34fd69c3dc",
+        "name": "Long Melon (Kakri)",
+        "name_gj": "કાકડી"
+      },
+      {
+        "id": "698c69aa912eab34fd69c414",
+        "name": "Sponge gourd",
+        "name_gj": "ઘોસાળી"
+      },
+      {
+        "id": "698c69aa912eab34fd69c443",
+        "name": "Rajgir",
+        "name_gj": "રાજગરો"
+      },
+      {
+        "id": "698c69aa912eab34fd69c4ba",
+        "name": "Cluster Beans",
+        "name_gj": "ગવાર ફળી"
+      },
+      {
+        "id": "698c69ab912eab34fd69c59a",
+        "name": "Darjeeling",
+        "name_gj": "દાર્જિલિંગ"
+      },
+      {
+        "id": "698c69ab912eab34fd69c635",
+        "name": "Green",
+        "name_gj": "લીલું"
+      },
+      {
+        "id": "698c69ab912eab34fd69c691",
+        "name": "Nasik",
+        "name_gj": "નાસિક"
+      },
+      {
+        "id": "698c69ab912eab34fd69c723",
+        "name": "Big (With Shell)",
+        "name_gj": "મોટું (છિલકા સાથે)"
+      },
+      {
+        "id": "698c69ab912eab34fd69c79e",
+        "name": "Round/Long",
+        "name_gj": "ગોળ/લાંબું"
+      },
+      {
+        "id": "698c69ab912eab34fd69c861",
+        "name": "Chips",
+        "name_gj": "ચીપ્સ"
+      },
+      {
+        "id": "698c69ab912eab34fd69c902",
+        "name": "Sharbati",
+        "name_gj": "શરબતી"
+      },
+      {
+        "id": "698c69ab912eab34fd69c90d",
+        "name": "Sonalika",
+        "name_gj": "સોનાલિકા"
+      },
+      {
+        "id": "698c6c485dc8d42d60acb9a6",
+        "name": "Pointed gourd (Parval)",
+        "name_gj": "પરવળ"
+      },
+      {
+        "id": "698c6c495dc8d42d60acbb92",
+        "name": "Chana Kabuli",
+        "name_gj": "કાબુલી ચણા"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc106",
+        "name": "PISSI",
+        "name_gj": "પીસી"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc1b0",
+        "name": "White Peas",
+        "name_gj": "સફેદ વટાણા"
+      },
+      {
+        "id": "698c6c4a5dc8d42d60acc340",
+        "name": "M-37",
+        "name_gj": "M-37"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60acc62f",
+        "name": "Lashkari",
+        "name_gj": "લશ્કરી"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60acc712",
+        "name": "Medium",
+        "name_gj": "મધ્યમ"
+      },
+      {
+        "id": "698c6c4b5dc8d42d60accc0f",
+        "name": "Rai UP",
+        "name_gj": "રાઈ ઉત્તર પ્રદેશ"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acda16",
+        "name": "Rajkot T-9",
+        "name_gj": "રાજકોટ T-9"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acdb6e",
+        "name": "Jowar (Yellow)",
+        "name_gj": "જુવાર (પીળું)"
+      },
+      {
+        "id": "698c6c4c5dc8d42d60acdc89",
+        "name": "Sechor No. 1",
+        "name_gj": "સેંચોર નંબર 1"
+      },
+      {
+        "id": "698c6cd70772c8759546be90",
+        "name": "Arkasheela Mattigulla",
+        "name_gj": "અર્કશીલા માટીગુલ્લા"
+      },
+      {
+        "id": "698c6cd70772c8759546c2de",
+        "name": "Average",
+        "name_gj": "સરેરાશ"
+      },
+      {
+        "id": "698c6cd70772c8759546c43f",
+        "name": "Mango - Raw-Ripe",
+        "name_gj": "કેરી - કાચી-પાકી"
+      },
+      {
+        "id": "698c6cd80772c8759546c91d",
+        "name": "Bold Kernel",
+        "name_gj": "બોલ્ડ દાણા"
+      },
+      {
+        "id": "698c6cd80772c8759546cb14",
+        "name": "Small",
+        "name_gj": "નાનું"
+      },
+      {
+        "id": "698c6cd80772c8759546cbe5",
+        "name": "Asalia",
+        "name_gj": "આસલીયા"
+      },
+      {
+        "id": "698c6cd80772c8759546cc53",
+        "name": "Indian Beans (Seam)",
+        "name_gj": "સીમ"
+      },
+      {
+        "id": "698c6cd80772c8759546cc67",
+        "name": "Kabul",
+        "name_gj": "કાબુલ"
+      },
+      {
+        "id": "698c6cd90772c8759546d16d",
+        "name": "Deshi White",
+        "name_gj": "દેશી સફેદ"
+      },
+      {
+        "id": "698c6cda0772c8759546d769",
+        "name": "Seed",
+        "name_gj": "બીજ"
+      },
+      {
+        "id": "698c6cda0772c8759546d7d7",
+        "name": "Desi(Whole)",
+        "name_gj": "દેશી(આખું)"
+      },
+      {
+        "id": "698c6cda0772c8759546db19",
+        "name": "G. R. 11",
+        "name_gj": "G. R. 11"
+      },
+      {
+        "id": "698c6cdf0772c8759546f289",
+        "name": "Milbar",
+        "name_gj": "મિલબાર"
+      },
+      {
+        "id": "698c6cdf0772c8759546f30b",
+        "name": "Black Gram Dal",
+        "name_gj": "ઉડદ દાળ"
+      },
+      {
+        "id": "698c6ce00772c8759546f86e",
+        "name": "Hybrid/Local",
+        "name_gj": "સંકર/સ્થાનિક"
+      },
+      {
+        "id": "698c6ce00772c8759546f990",
+        "name": "Jalander",
+        "name_gj": "જાલંધર"
+      },
+      {
+        "id": "698c6ce00772c8759546fbae",
+        "name": "Mataki (W)",
+        "name_gj": "માટકી (આખું)"
+      },
+      {
+        "id": "698c6ce10772c8759546fd29",
+        "name": "Jaya",
+        "name_gj": "જયા"
+      },
+      {
+        "id": "698c6ce30772c87595470033",
+        "name": "Surat Beans (Papadi)",
+        "name_gj": "પાપડી"
+      },
+      {
+        "id": "698c6ce50772c8759547045d",
+        "name": "Beans (Whole)",
+        "name_gj": "ફળી (આખી)"
+      },
+      {
+        "id": "698c6ce60772c87595470d22",
+        "name": "Deshi Red",
+        "name_gj": "દેશી લાલ"
+      },
+      {
+        "id": "698c6ce60772c8759547148e",
+        "name": "Best",
+        "name_gj": "શ્રેષ્ઠ"
+      },
+      {
+        "id": "698c6ce90772c875954720d5",
+        "name": "Paddy Dappa",
+        "name_gj": "ધાન દપ્પા"
+      },
+      {
+        "id": "698c6cea0772c875954727c8",
+        "name": "Bunny",
+        "name_gj": "બન્ની"
+      },
+      {
+        "id": "698c6cfd0772c8759547b44a",
+        "name": "Navane Hybrid",
+        "name_gj": "કાંગ સંકર"
+      },
+      {
+        "id": "698c6cff0772c8759547c56e",
+        "name": "Dry",
+        "name_gj": "સૂકું"
+      },
+      {
+        "id": "698c6d090772c8759548081a",
+        "name": "Paddy Coarse",
+        "name_gj": "ધાન જાડું"
+      },
+      {
+        "id": "698c6d160772c87595484ed8",
+        "name": "Hybrid Yellow (Cattle Feed)",
+        "name_gj": "સંકર પીળું (પશુ ચારો)"
+      },
+      {
+        "id": "698c6d240772c8759548b103",
+        "name": "999",
+        "name_gj": "999"
+      },
+      {
+        "id": "698c6d260772c8759548cc1c",
+        "name": "Big 100 Kg",
+        "name_gj": "મોટું 100 કિલો"
+      },
+      {
+        "id": "698c6d350772c8759549328a",
+        "name": "Taramira",
+        "name_gj": "તારામીરા"
+      },
+      {
+        "id": "698d53a9631dc1e4e918c2b2",
+        "name": "Keshar",
+        "name_gj": "કેસર"
+      }
+    ],
+    "grade": [
+      {
+        "id": "698c69a6912eab34fd69a762",
+        "name": "Local",
+        "name_gj": "સ્થાનિક"
+      },
+      {
+        "id": "698c69a6912eab34fd69a773",
+        "name": "FAQ",
+        "name_gj": "FAQ"
+      },
+      {
+        "id": "698c69a6912eab34fd69a803",
+        "name": "Non-FAQ",
+        "name_gj": "નોન-FAQ"
+      },
+      {
+        "id": "698c69a7912eab34fd69a9b9",
+        "name": "Grade A",
+        "name_gj": "ગ્રેડ A"
+      },
+      {
+        "id": "698c69a7912eab34fd69aa1b",
+        "name": "Medium",
+        "name_gj": "મધ્યમ"
+      },
+      {
+        "id": "698c69a7912eab34fd69ad7d",
+        "name": "Grade B",
+        "name_gj": "ગ્રેડ B"
+      },
+      {
+        "id": "698c69a7912eab34fd69ae76",
+        "name": "Grade Range-2",
+        "name_gj": "ગ્રેડ શ્રેણી-2"
+      },
+      {
+        "id": "698c69a9912eab34fd69bb58",
+        "name": "Large",
+        "name_gj": "મોટું"
+      },
+      {
+        "id": "698c6cd80772c8759546c7a2",
+        "name": "Grade C",
+        "name_gj": "ગ્રેડ C"
+      },
+      {
+        "id": "698c6ce10772c8759546fdfb",
+        "name": "Grade Range-1",
+        "name_gj": "ગ્રેડ શ્રેણી-1"
+      },
+      {
+        "id": "698c6ce50772c875954708d7",
+        "name": "Grade Range-3",
+        "name_gj": "ગ્રેડ શ્રેણી-3"
+      }
+    ]
+  }
+}
+

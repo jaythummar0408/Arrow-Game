@@ -1,0 +1,785 @@
+{
+  "info": {
+    "_postman_id": "apmc-khetivadi-collection-2026",
+    "name": "APMC Khetivadi API",
+    "description": "Complete API collection for APMC Khetivadi Backend - Market Commodity Price Data Management System\n\n**Base URL:** http://localhost:5000\n**Version:** v1\n**Last Updated:** February 12, 2026\n\n## Features\n- Real-time market price data synchronization\n- Advanced filtering and sorting\n- Statistics and aggregations\n- Location hierarchy queries\n- Market analytics (Live vs Historical comparison)\n- 15+ query parameters\n\n## Documentation\n- Master API Guide: MASTER_API_GUIDE.md\n- Sync API Guide: SYNC_API_GUIDE.md\n- Deployment Guide: DEPLOYMENT_GUIDE.md",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root & Health",
+      "item": [
+        {
+          "name": "Root - API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            },
+            "description": "Get API information, version, and available endpoints"
+          },
+          "response": []
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            },
+            "description": "Check server health status, uptime, and database connection"
+          },
+          "response": []
+        },
+        {
+          "name": "API Documentation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1"]
+            },
+            "description": "Get complete API documentation with all routes and parameters"
+          },
+          "response": []
+        }
+      ],
+      "description": "Basic endpoints for API information and health monitoring"
+    },
+    {
+      "name": "Sync API",
+      "item": [
+        {
+          "name": "Sync Yesterday Data",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"state\": \"Gujarat\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/sync/yesterday",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "sync", "yesterday"]
+            },
+            "description": "Sync yesterday's market price data from Data.gov.in API"
+          },
+          "response": []
+        },
+        {
+          "name": "Sync Specific Date",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"date\": \"10-02-2026\",\n    \"state\": \"Gujarat\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/sync/date",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "sync", "date"]
+            },
+            "description": "Sync market price data for a specific date (Format: DD-MM-YYYY)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Sync Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/sync/status",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "sync", "status"]
+            },
+            "description": "Get database statistics: total records, states, districts, markets, commodities, varieties, grades"
+          },
+          "response": []
+        }
+      ],
+      "description": "Data synchronization endpoints for importing market price data from Data.gov.in"
+    },
+    {
+      "name": "Market Prices - Query",
+      "item": [
+        {
+          "name": "Get Market Prices (All Filters)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=7&state=Gujarat&limit=10&populate=true&sortBy=arrival_date&sortOrder=desc&page=1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "7",
+                  "description": "Date range: 7, 15, or 30 days"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-02-01",
+                  "description": "Custom start date (YYYY-MM-DD)",
+                  "disabled": true
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-02-10",
+                  "description": "Custom end date (YYYY-MM-DD)",
+                  "disabled": true
+                },
+                {
+                  "key": "state",
+                  "value": "Gujarat",
+                  "description": "Filter by state"
+                },
+                {
+                  "key": "district",
+                  "value": "Ahmedabad",
+                  "description": "Filter by district",
+                  "disabled": true
+                },
+                {
+                  "key": "market",
+                  "value": "Ahmedabad APMC",
+                  "description": "Filter by market",
+                  "disabled": true
+                },
+                {
+                  "key": "commodity",
+                  "value": "Wheat",
+                  "description": "Filter by commodity name",
+                  "disabled": true
+                },
+                {
+                  "key": "commodityCode",
+                  "value": "4",
+                  "description": "Filter by commodity code",
+                  "disabled": true
+                },
+                {
+                  "key": "variety",
+                  "value": "Local",
+                  "description": "Filter by variety",
+                  "disabled": true
+                },
+                {
+                  "key": "grade",
+                  "value": "FAQ",
+                  "description": "Filter by grade",
+                  "disabled": true
+                },
+                {
+                  "key": "minPrice",
+                  "value": "1000",
+                  "description": "Minimum modal price",
+                  "disabled": true
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "10000",
+                  "description": "Maximum modal price",
+                  "disabled": true
+                },
+                {
+                  "key": "sortBy",
+                  "value": "arrival_date",
+                  "description": "Sort field: arrival_date, modal_price, min_price, max_price"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "desc",
+                  "description": "Sort order: asc, desc"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number"
+                },
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "description": "Records per page (max 100)"
+                },
+                {
+                  "key": "populate",
+                  "value": "true",
+                  "description": "Populate references: true, false"
+                }
+              ]
+            },
+            "description": "Main query endpoint with 15+ filter parameters. Enable/disable query params as needed."
+          },
+          "response": []
+        },
+        {
+          "name": "Last 7 Days - Gujarat",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=7&state=Gujarat&limit=20&populate=true",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "7"
+                },
+                {
+                  "key": "state",
+                  "value": "Gujarat"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "populate",
+                  "value": "true"
+                }
+              ]
+            },
+            "description": "Get prices for last 7 days in Gujarat"
+          },
+          "response": []
+        },
+        {
+          "name": "Wheat Prices - Sorted by Price",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=15&commodity=Wheat&sortBy=modal_price&sortOrder=desc&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "15"
+                },
+                {
+                  "key": "commodity",
+                  "value": "Wheat"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "modal_price"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "desc"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Get Wheat prices for last 15 days, sorted by price (highest first)"
+          },
+          "response": []
+        },
+        {
+          "name": "Price Range Filter (₹5000-7000)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=30&minPrice=5000&maxPrice=7000&sortBy=modal_price&sortOrder=asc&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "30"
+                },
+                {
+                  "key": "minPrice",
+                  "value": "5000"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "7000"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "modal_price"
+                },
+                {
+                  "key": "sortOrder",
+                  "value": "asc"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Filter prices between ₹5,000 and ₹7,000"
+          },
+          "response": []
+        },
+        {
+          "name": "Specific District - Ahmedabad",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=30&state=Gujarat&district=Ahmedabad&populate=true&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "30"
+                },
+                {
+                  "key": "state",
+                  "value": "Gujarat"
+                },
+                {
+                  "key": "district",
+                  "value": "Ahmedabad"
+                },
+                {
+                  "key": "populate",
+                  "value": "true"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Get all prices in Ahmedabad district for last 30 days"
+          },
+          "response": []
+        },
+        {
+          "name": "Custom Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?startDate=2026-02-01&endDate=2026-02-10&populate=true&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-02-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-02-10"
+                },
+                {
+                  "key": "populate",
+                  "value": "true"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Query with custom date range (YYYY-MM-DD format)"
+          },
+          "response": []
+        },
+        {
+          "name": "Without Population (Fast)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices?days=7&populate=false&limit=50",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "7"
+                },
+                {
+                  "key": "populate",
+                  "value": "false"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            },
+            "description": "Faster query with only IDs (no population)"
+          },
+          "response": []
+        }
+      ],
+      "description": "Query market prices with various filters and sorting options"
+    },
+    {
+      "name": "Market Prices - Stats",
+      "item": [
+        {
+          "name": "Get Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/stats?days=30&state=Gujarat",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "stats"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "30",
+                  "description": "Date range: 7, 15, or 30"
+                },
+                {
+                  "key": "state",
+                  "value": "Gujarat",
+                  "description": "Filter by state"
+                },
+                {
+                  "key": "commodity",
+                  "value": "Wheat",
+                  "description": "Filter by commodity",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Get aggregated statistics: total records, avg/min/max prices, top commodities, top markets"
+          },
+          "response": []
+        },
+        {
+          "name": "Stats - Last 7 Days",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/stats?days=7",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "stats"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "7"
+                }
+              ]
+            },
+            "description": "Statistics for last 7 days"
+          },
+          "response": []
+        },
+        {
+          "name": "Stats - Wheat Only",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/stats?days=30&commodity=Wheat",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "stats"],
+              "query": [
+                {
+                  "key": "days",
+                  "value": "30"
+                },
+                {
+                  "key": "commodity",
+                  "value": "Wheat"
+                }
+              ]
+            },
+            "description": "Statistics for Wheat commodity only"
+          },
+          "response": []
+        }
+      ],
+      "description": "Statistical analysis and aggregations"
+    },
+    {
+      "name": "Market Prices - Filters",
+      "item": [
+        {
+          "name": "Get All Filter Options",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/filters",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "filters"]
+            },
+            "description": "Get all available filter values: states, commodities (with codes), varieties, grades, date ranges"
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Commodities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/commodities",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "commodities"]
+            },
+            "description": "Get all commodities with their codes"
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Varieties",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/varieties",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "varieties"]
+            },
+            "description": "Get all variety options"
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Grades",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/grades",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "grades"]
+            },
+            "description": "Get all grade options"
+          },
+          "response": []
+        }
+      ],
+      "description": "Get filter options for dropdowns and selections"
+    },
+    {
+      "name": "Market Prices - Locations",
+      "item": [
+        {
+          "name": "Get All States",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/locations/states",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "market-prices", "locations", "states"]
+            },
+            "description": "Get all available states"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Districts by State",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/locations/districts/:state",
+              "host": ["{{base_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "market-prices",
+                "locations",
+                "districts",
+                ":state"
+              ],
+              "variable": [
+                {
+                  "key": "state",
+                  "value": "Gujarat",
+                  "description": "State name"
+                }
+              ]
+            },
+            "description": "Get all districts in a specific state"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Markets by District",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/market-prices/locations/markets/:district",
+              "host": ["{{base_url}}"],
+              "path": [
+                "api",
+                "v1",
+                "market-prices",
+                "locations",
+                "markets",
+                ":district"
+              ],
+              "variable": [
+                {
+                  "key": "district",
+                  "value": "Ahmedabad",
+                  "description": "District name"
+                }
+              ]
+            },
+            "description": "Get all markets in a specific district"
+          },
+          "response": []
+        }
+      ],
+      "description": "Hierarchical location queries (State → District → Market)"
+    },
+    {
+      "name": "Analytics API",
+      "item": [
+        {
+          "name": "Get Markets List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/analytics/markets",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "analytics", "markets"],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "Gujarat",
+                  "description": "Filter by state",
+                  "disabled": true
+                },
+                {
+                  "key": "district",
+                  "value": "Ahmedabad",
+                  "description": "Filter by district",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Get all markets with state and district information. Use this to get market IDs for analytics."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Market Analytics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/analytics/market/:marketId",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "analytics", "market", ":marketId"],
+              "variable": [
+                {
+                  "key": "marketId",
+                  "value": "698c6c4a5dc8d42d60acc036",
+                  "description": "Market ObjectId (get from markets list)"
+                }
+              ]
+            },
+            "description": "Get comprehensive market analytics comparing live data (from Data.gov.in API) with historical data (from database).\n\n**Provides:**\n- Price hikes (commodities with increased prices)\n- Price drops (commodities with decreased prices)\n- New commodities added today\n- Unchanged prices\n- Commodities not updated today\n- Single entry commodities\n- Highest and lowest priced commodities\n- Summary statistics"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Markets by State",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/analytics/markets?state=Gujarat",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "analytics", "markets"],
+              "query": [
+                {
+                  "key": "state",
+                  "value": "Gujarat"
+                }
+              ]
+            },
+            "description": "Get all markets filtered by state"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Markets by District",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/analytics/markets?district=Ahmedabad",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "analytics", "markets"],
+              "query": [
+                {
+                  "key": "district",
+                  "value": "Ahmedabad"
+                }
+              ]
+            },
+            "description": "Get all markets filtered by district"
+          },
+          "response": []
+        }
+      ],
+      "description": "Market analytics - Compare live data with historical database for comprehensive insights"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    }
+  ]
+}

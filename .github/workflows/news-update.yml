@@ -1,0 +1,36 @@
+name: Daily news & schemes
+
+# Refreshes agriculture news + Gujarat schemes, translates new items, purges
+# items older than 7 days, and broadcasts. Runs once daily at 06:00 IST.
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: apmc-data-jobs
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NODE_ENV: production
+      DB_NAME: APMC
+      MONGO_URI_PROD: ${{ secrets.MONGO_URI_PROD }}
+      MONGO_URI_DEV: ${{ secrets.MONGO_URI_DEV }}
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Refresh news + schemes (7-day purge + broadcast)
+        run: node scripts/dailyUpdate.js

@@ -1,0 +1,37 @@
+name: Sync prices & check alerts
+
+# Keeps recent prices fresh and fires price alerts on fresh data.
+# Runs 4x during Indian daytime (09:00, 12:00, 15:00, 18:00 IST).
+# Times are UTC; IST = UTC+5:30.
+on:
+  schedule:
+    - cron: "30 3,6,9,12 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: apmc-data-jobs
+  cancel-in-progress: false
+
+jobs:
+  sync-and-alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NODE_ENV: production
+      DB_NAME: APMC
+      DATA_GOV_BASE_URL: https://api.data.gov.in/resource
+      MONGO_URI_PROD: ${{ secrets.MONGO_URI_PROD }}
+      MONGO_URI_DEV: ${{ secrets.MONGO_URI_DEV }}
+      DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Sync recent prices (today + last 2 days)
+        run: node scripts/fastBackfill.js 3
+      - name: Check price alerts (send FCM push)
+        run: node scripts/checkPriceAlertsCron.js
