@@ -34,3 +34,5 @@ jobs:
         run: node scripts/fastBackfill.js 5
       - name: Purge old prices (35-day retention)
         run: node scripts/purgeOldPrices.js
+      - name: Purge old news (7-day retention)
+        run: node scripts/purgeOldNews.js

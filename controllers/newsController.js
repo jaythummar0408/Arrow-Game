@@ -106,10 +106,17 @@ async function ingestSchemes() {
   return { curatedCreated, curatedRefreshed, scraped, skipped, fetched: raw.length };
 }
 
-/** Delete news/scheme items older than `days` (default 7). */
+/**
+ * Delete news/scheme items older than `days` (default 7). Curated evergreen
+ * schemes (externalId "scheme:*") are kept — they're long-lived and refreshed
+ * daily, and are what keeps the Yojana tab populated.
+ */
 async function purgeOld(days = RETENTION_DAYS) {
   const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
-  const del = await News.deleteMany({ publishedAt: { $lt: cutoff } });
+  const del = await News.deleteMany({
+    publishedAt: { $lt: cutoff },
+    externalId: { $not: /^scheme:/ },
+  });
   return { deleted: del.deletedCount || 0, cutoff };
 }
 
@@ -168,7 +175,19 @@ async function runDailyUpdate() {
 exports.getNews = async (req, res) => {
   try {
     const { section, limit } = req.query;
-    const query = { isActive: true };
+
+    // Only surface the last 7 days of scraped items. Curated evergreen schemes
+    // (externalId "scheme:*") are exempt — they're not time-sensitive and are
+    // refreshed by the daily job, so the Yojana tab never empties out.
+    const cutoff = new Date(Date.now() - RETENTION_DAYS * 24 * 60 * 60 * 1000);
+
+    const query = {
+      isActive: true,
+      $or: [
+        { publishedAt: { $gte: cutoff } },
+        { externalId: { $regex: /^scheme:/ } },
+      ],
+    };
     if (section === "yojana" || section === "samachar") query.section = section;
 
     const items = await News.find(query)
@@ -236,7 +255,9 @@ exports.createNews = async (req, res) => {
 exports.refreshNews = async (req, res) => {
   try {
     const r = await ingestNews();
-    return res.json({ success: true, ...r });
+    // New data in → old data out: enforce the 7-day window immediately.
+    const purge = await purgeOld();
+    return res.json({ success: true, ...r, purged: purge.deleted });
   } catch (error) {
     console.error("refreshNews error:", error);
     return res.status(500).json({ success: false, message: "Failed to refresh news", error: error.message });
