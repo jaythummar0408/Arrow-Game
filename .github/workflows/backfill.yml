@@ -1,0 +1,37 @@
+name: Backfill prices (manual)
+
+# One-off / on-demand backfill of the last N calendar days of mandi prices
+# from data.gov.in into Atlas. Runs on manual trigger only (no schedule).
+# Idempotent: fastBackfill upserts, so re-running never duplicates rows.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days to backfill (including today)"
+        required: true
+        default: "30"
+
+concurrency:
+  group: apmc-data-jobs
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NODE_ENV: production
+      DB_NAME: APMC
+      DATA_GOV_BASE_URL: https://api.data.gov.in/resource
+      MONGO_URI_PROD: ${{ secrets.MONGO_URI_PROD }}
+      MONGO_URI_DEV: ${{ secrets.MONGO_URI_DEV }}
+      DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Backfill last ${{ github.event.inputs.days }} day(s)
+        run: node scripts/fastBackfill.js ${{ github.event.inputs.days }}
