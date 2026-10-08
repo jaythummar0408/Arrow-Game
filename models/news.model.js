@@ -26,6 +26,7 @@ const newsSchema = new mongoose.Schema(
     },
     source: { type: String, default: "" },
     url: { type: String, default: "" },
+    imageUrl: { type: String, default: "" }, // article thumbnail/photo
     publishedAt: { type: Date, default: Date.now, index: true },
 
     // Localized content

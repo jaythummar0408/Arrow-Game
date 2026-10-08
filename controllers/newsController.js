@@ -27,9 +27,10 @@ async function storeArticle(item, section, category) {
     item.body && item.body !== item.summary ? await localizeToAll(item.body) : tSummary;
   await News.create({
     section,
-    category,
+    category: item.category || category,
     source: item.source,
     url: item.url,
+    imageUrl: item.image || "",
     publishedAt: item.publishedAt,
     externalId: item.externalId,
     title: tTitle,
@@ -201,6 +202,7 @@ exports.getNews = async (req, res) => {
       category: n.category,
       source: n.source,
       url: n.url,
+      image: n.imageUrl || "",
       date: n.publishedAt,
       title: loc(n.title),
       summary: loc(n.summary),

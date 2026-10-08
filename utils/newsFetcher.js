@@ -72,6 +72,7 @@ async function fetchFromNewsData(query, maxPages = 3) {
         body: body || summary,
         url: r.link || "",
         source: r.source_id || r.source_name || "NewsData",
+        image: r.image_url || "",
         publishedAt: r.pubDate ? new Date(r.pubDate) : new Date(),
       });
     }
@@ -117,8 +118,75 @@ async function fetchFromGoogleRss(query) {
       body: desc || cleanTitle,
       url: link,
       source,
+      image: "",
       publishedAt: pubDate ? new Date(pubDate) : new Date(),
     });
+  }
+  return items;
+}
+
+/**
+ * Krishi Jagran — India's largest agri publication. Its FeedBurner "latest"
+ * feed carries a real paragraph <description> AND an article image
+ * (<media:content> / <media:thumbnail>), so cards can show a photo. The whole
+ * publication is agriculture, so we trust every item and only classify it into
+ * a section (samachar / yojana) + a display category.
+ */
+const KRISHIJAGRAN_FEED =
+  process.env.KRISHIJAGRAN_FEED_URL || "https://feeds.feedburner.com/krishijagran/latest";
+
+const KJ_SCHEME_RE =
+  /\b(yojana|scheme|subsid(y|ies)|pm-?kisan|pmfby|pmksy|kisan credit|\bkcc\b|insurance|grant|loan waiver|sarkari|beneficiar|govt\.? (scheme|plan)|government (scheme|plan|subsidy))\b/i;
+const KJ_WEATHER_RE = /\b(weather|rain|rainfall|monsoon|\bimd\b|forecast|cyclone|heatwave|cold wave|drought|flood)\b/i;
+const KJ_MARKET_RE = /\b(price|prices|mandi|market|rate|\bmsp\b|export|import|demand|commodity|wholesale|procurement)\b/i;
+const KJ_TIP_RE = /\b(how to|tips?|guide|technique|method|cultivation|cultivate|grow|variety|varieties|best practice|管理|manage|control (pest|disease))\b/i;
+
+const classifyKj = (item) => {
+  const t = `${item.title} ${item.summary}`;
+  if (KJ_SCHEME_RE.test(t)) return { section: "yojana", category: "scheme" };
+  let category = "general";
+  if (KJ_WEATHER_RE.test(t)) category = "weather";
+  else if (KJ_MARKET_RE.test(t)) category = "market";
+  else if (KJ_TIP_RE.test(t)) category = "tip";
+  return { section: "samachar", category };
+};
+
+async function fetchFromKrishiJagran(feedUrl = KRISHIJAGRAN_FEED) {
+  const res = await axios.get(feedUrl, {
+    timeout: 20000,
+    responseType: "arraybuffer", // decode as UTF-8 ourselves so ₹ etc. survive
+    headers: { "User-Agent": "Mozilla/5.0 (compatible; FarmerPulse/1.0)" },
+  });
+  const xml = Buffer.from(res.data).toString("utf8");
+  const items = [];
+  const itemRe = /<item>([\s\S]*?)<\/item>/g;
+  const cdata = (s) => s.replace(/^\s*<!\[CDATA\[/, "").replace(/\]\]>\s*$/, "").trim();
+  const pick = (block, tag) => {
+    const r = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`).exec(block);
+    return r ? cdata(r[1]) : "";
+  };
+  let m;
+  while ((m = itemRe.exec(xml))) {
+    const block = m[1];
+    const title = stripHtml(pick(block, "title"));
+    if (!title) continue;
+    const link = pick(block, "link");
+    const summary = stripHtml(pick(block, "description"));
+    const pubDate = pick(block, "pubDate");
+    const imgM =
+      /<media:content[^>]*\burl="([^"]+)"/.exec(block) ||
+      /<media:thumbnail[^>]*\burl="([^"]+)"/.exec(block);
+    const base = {
+      externalId: hash(link || title),
+      title,
+      summary,
+      body: summary, // feed has no full body; summary is a real paragraph
+      url: link,
+      source: "Krishi Jagran",
+      image: imgM ? imgM[1] : "",
+      publishedAt: pubDate ? new Date(pubDate) : new Date(),
+    };
+    items.push({ ...base, ...classifyKj(base) });
   }
   return items;
 }
@@ -166,9 +234,43 @@ async function fetchAgri(query, label) {
   }
 }
 
-/** Latest farmer news (all matching items). */
-const fetchAgriNews = () => fetchAgri(NEWS_QUERY, "News");
-/** Latest farmer scheme news (all matching items). */
-const fetchSchemeNews = () => fetchAgri(SCHEME_QUERY, "Schemes");
+/** Pull + classify the Krishi Jagran feed once; [] on any failure. */
+async function fetchKrishiJagranSafe() {
+  try {
+    const items = await fetchFromKrishiJagran();
+    return items;
+  } catch (err) {
+    console.error("Krishi Jagran fetch failed:", err.message);
+    return [];
+  }
+}
 
-module.exports = { fetchAgriNews, fetchSchemeNews };
+/**
+ * Latest farmer news (samachar). Krishi Jagran is the primary source (real
+ * paragraphs + images); if it's unavailable, fall back to NewsData/Google.
+ */
+async function fetchAgriNews() {
+  const kj = await fetchKrishiJagranSafe();
+  const samachar = kj.filter((i) => i.section === "samachar");
+  if (samachar.length > 0) {
+    console.log(`   News: Krishi Jagran — ${kj.length} fetched, ${samachar.length} samachar kept.`);
+    return samachar;
+  }
+  return fetchAgri(NEWS_QUERY, "News");
+}
+
+/**
+ * Latest farmer scheme news (yojana). Krishi Jagran first; fall back to
+ * NewsData/Google scheme query if it has no scheme items.
+ */
+async function fetchSchemeNews() {
+  const kj = await fetchKrishiJagranSafe();
+  const yojana = kj.filter((i) => i.section === "yojana");
+  if (yojana.length > 0) {
+    console.log(`   Schemes: Krishi Jagran — ${yojana.length} yojana kept.`);
+    return yojana;
+  }
+  return fetchAgri(SCHEME_QUERY, "Schemes");
+}
+
+module.exports = { fetchAgriNews, fetchSchemeNews, fetchFromKrishiJagran };
