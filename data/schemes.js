@@ -12,9 +12,24 @@
  *    empty ("") to fall back to the branded gradient tile.
  */
 
-// Stable Wikimedia Commons image by file name (verified to resolve).
-const img = (file) =>
-  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=800`;
+// Scheme images are hosted on the app's Cloudinary CDN (serves any client,
+// unlike Wikimedia which 403s non-browser user-agents). Source photos came
+// from Wikimedia Commons; uploaded to the apmc_schemes folder.
+const CLOUDINARY = "https://res.cloudinary.com/djzu5hn0r/image/upload/apmc_schemes";
+const IMG_KEY = {
+  "Indian farmer.jpg": "farmer",
+  "Paddy field.jpg": "paddy",
+  "Drip irrigation.jpg": "drip",
+  "Cotton field.jpg": "cotton",
+  "Farmer plowing.jpg": "plowing",
+  "Wheat field.jpg": "wheat",
+  "Soil testing.jpg": "soil",
+  "Solar panel.jpg": "solar",
+  "Maize field.jpg": "maize",
+  "Sugarcane field.jpg": "sugarcane",
+  "Groundnut.jpg": "groundnut",
+};
+const img = (file) => `${CLOUDINARY}/${IMG_KEY[file] || "farmer"}.jpg`;
 
 module.exports = [
   {
