@@ -5,7 +5,9 @@ const { sendGenericNotification } = require("../utils/firebaseNotification");
 const { createNotification } = require("./notificationController");
 const SCHEMES = require("../data/schemes");
 
-const RETENTION_DAYS = 7; // keep the last 7 days, then delete old items
+const DAY_MS = 24 * 60 * 60 * 1000;
+const NEWS_RETENTION_DAYS = 7; // samachar (farmer news): last 7 days
+const SCHEME_RETENTION_DAYS = 30; // yojana (schemes): last 30 days
 
 /** Ensure a localized field always has every language (fallback to en). */
 const loc = (l) => {
@@ -73,7 +75,7 @@ async function ingestSchemes() {
     if (existing) {
       await News.updateOne(
         { externalId },
-        { $set: { publishedAt: new Date(), source: s.source || "", url: s.url || "" } },
+        { $set: { publishedAt: new Date(), source: s.source || "", url: s.url || "", imageUrl: s.image || "" } },
       );
       curatedRefreshed++;
       continue;
@@ -86,6 +88,7 @@ async function ingestSchemes() {
       category: "scheme",
       source: s.source || "",
       url: s.url || "",
+      imageUrl: s.image || "",
       publishedAt: new Date(),
       externalId,
       title,
@@ -112,13 +115,17 @@ async function ingestSchemes() {
  * schemes (externalId "scheme:*") are kept — they're long-lived and refreshed
  * daily, and are what keeps the Yojana tab populated.
  */
-async function purgeOld(days = RETENTION_DAYS) {
-  const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+async function purgeOld() {
+  const newsCutoff = new Date(Date.now() - NEWS_RETENTION_DAYS * DAY_MS);
+  const schemeCutoff = new Date(Date.now() - SCHEME_RETENTION_DAYS * DAY_MS);
   const del = await News.deleteMany({
-    publishedAt: { $lt: cutoff },
-    externalId: { $not: /^scheme:/ },
+    externalId: { $not: /^scheme:/ }, // curated evergreen schemes are always kept
+    $or: [
+      { section: "samachar", publishedAt: { $lt: newsCutoff } },
+      { section: "yojana", publishedAt: { $lt: schemeCutoff } },
+    ],
   });
-  return { deleted: del.deletedCount || 0, cutoff };
+  return { deleted: del.deletedCount || 0, newsCutoff, schemeCutoff };
 }
 
 /** Push a broadcast to every user that has an FCM token (+ notification-centre record). */
@@ -177,15 +184,17 @@ exports.getNews = async (req, res) => {
   try {
     const { section, limit } = req.query;
 
-    // Only surface the last 7 days of scraped items. Curated evergreen schemes
-    // (externalId "scheme:*") are exempt — they're not time-sensitive and are
-    // refreshed by the daily job, so the Yojana tab never empties out.
-    const cutoff = new Date(Date.now() - RETENTION_DAYS * 24 * 60 * 60 * 1000);
+    // Farmer news (samachar) shows the last 7 days; schemes (yojana) the last
+    // 30 days. Curated evergreen schemes (externalId "scheme:*") are always
+    // exempt so the Yojana tab never empties out.
+    const newsCutoff = new Date(Date.now() - NEWS_RETENTION_DAYS * DAY_MS);
+    const schemeCutoff = new Date(Date.now() - SCHEME_RETENTION_DAYS * DAY_MS);
 
     const query = {
       isActive: true,
       $or: [
-        { publishedAt: { $gte: cutoff } },
+        { section: "samachar", publishedAt: { $gte: newsCutoff } },
+        { section: "yojana", publishedAt: { $gte: schemeCutoff } },
         { externalId: { $regex: /^scheme:/ } },
       ],
     };
