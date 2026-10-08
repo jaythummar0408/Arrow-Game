@@ -196,47 +196,73 @@ const fetchDailyPrices = async (filters = {}, limit = 1500) => {
   }
 };
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 const fetchPastDayPrices = async (filters = {}, limit = 1500) => {
-  try {
-    const params = new URLSearchParams({
-      "api-key": API_CONFIG.apiKey,
-      format: "json",
-      limit: limit.toString(),
-    });
+  const params = new URLSearchParams({
+    "api-key": API_CONFIG.apiKey,
+    format: "json",
+    limit: limit.toString(),
+  });
 
-    // Add filters
-    if (filters.state) {
-      params.append("filters[State]", filters.state);
-    }
-    if (filters.district) {
-      params.append("filters[District]", filters.district);
-    }
-    if (filters.commodity) {
-      params.append("filters[Commodity]", filters.commodity);
-    }
-    if (filters.arrivalDate) {
-      params.append("filters[Arrival_Date]", filters.arrivalDate);
-    }
-
-    const url = `${API_CONFIG.baseURL}/35985678-0d79-46b4-9ed6-6f13308a1d24?${params.toString()}`;
-
-    const response = await axios.get(url, {
-      headers: API_CONFIG.headers,
-    });
-
-    return {
-      success: true,
-      data: response.data,
-      count: response.data.records?.length || 0,
-    };
-  } catch (error) {
-    console.error("Error fetching daily prices:", error.message);
-    return {
-      success: false,
-      error: error.message,
-      data: null,
-    };
+  // Add filters
+  if (filters.state) {
+    params.append("filters[State]", filters.state);
   }
+  if (filters.district) {
+    params.append("filters[District]", filters.district);
+  }
+  if (filters.commodity) {
+    params.append("filters[Commodity]", filters.commodity);
+  }
+  if (filters.arrivalDate) {
+    params.append("filters[Arrival_Date]", filters.arrivalDate);
+  }
+
+  const url = `${API_CONFIG.baseURL}/35985678-0d79-46b4-9ed6-6f13308a1d24?${params.toString()}`;
+
+  // data.gov.in throttles automated/datacenter traffic, so a single request can
+  // time out or return 429/5xx. Retry with exponential backoff and a hard
+  // per-request timeout so one slow response can't hang the whole job.
+  const MAX_ATTEMPTS = Number(process.env.DATA_GOV_MAX_RETRIES) || 4;
+  const REQ_TIMEOUT = Number(process.env.DATA_GOV_TIMEOUT_MS) || 25000;
+  let lastError = "request failed";
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const response = await axios.get(url, {
+        headers: API_CONFIG.headers,
+        timeout: REQ_TIMEOUT,
+      });
+      return {
+        success: true,
+        data: response.data,
+        count: response.data.records?.length || 0,
+      };
+    } catch (error) {
+      const status = error.response && error.response.status;
+      lastError = status
+        ? `API error (${status})`
+        : error.code || error.message || "request failed";
+      // Retry on throttling (429), server errors (5xx), timeouts and transient
+      // network errors. Don't retry a clear client error (e.g. 400/403).
+      const retriable =
+        !error.response ||
+        status === 429 ||
+        status >= 500 ||
+        ["ECONNABORTED", "ECONNRESET", "ETIMEDOUT", "ECONNREFUSED", "EAI_AGAIN", "ENOTFOUND"].includes(error.code);
+
+      if (attempt < MAX_ATTEMPTS && retriable) {
+        const backoff = Math.min(1000 * 2 ** (attempt - 1), 8000); // 1s, 2s, 4s, 8s
+        await sleep(backoff);
+        continue;
+      }
+      console.error(`Error fetching daily prices (attempt ${attempt}/${MAX_ATTEMPTS}): ${lastError}`);
+      return { success: false, error: lastError, data: null };
+    }
+  }
+
+  return { success: false, error: lastError, data: null };
 };
 /**
  * Get today's date in DD-MM-YYYY format
